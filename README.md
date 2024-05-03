@@ -21,6 +21,6 @@ Atelier n°1 du module de WebDynamique - Microservices
 
 ## Travail suplémentaire
 
-*  Web statique :
- *  Page d'affichage des toutes les cartes :
-  * Ouvrir le fichier ./web-statique/displayCards.html   
+* Web statique (HTML + JS):
+  * Page d'affichage des toutes les cartes :
+    * Ouvrir le fichier ./web-statique/displayCards.html  
