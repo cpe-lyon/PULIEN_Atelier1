@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class RequestCrt {
     @Autowired
@@ -25,6 +27,13 @@ public class RequestCrt {
         return "displayCard";
     }
 
+    @GetMapping(value = {"/list"})
+    public String viewAll(Model model) {
+        List<Card> cardList = cardService.getAll().stream().map(CardEntity::toDto).toList();
+        model.addAttribute("cardList", cardList);
+        return "displayAllCards";
+    }
+
     @GetMapping(value = {"/card/insertNew"})
     public String form(Model model) {
         model.addAttribute("cardForm", new Card());
@@ -34,6 +43,7 @@ public class RequestCrt {
     @PostMapping(value = {"/card/insertFromForm"})
     public String insertCard(@ModelAttribute Card cardForm, Model model) {
         CardEntity card = cardService.insert(cardForm);
+        // TODO gestion d'erreur lorsque card est null ?
         return "displayCard";
     }
 }
