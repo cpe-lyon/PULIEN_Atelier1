@@ -26,4 +26,7 @@ Atelier n°1 du module de WebDynamique - Microservices
 
 * Web statique (HTML + JS):
   * Page d'affichage des toutes les cartes :
-    * Ouvrir le fichier ./web-statique/displayCards.html  
+    * Ouvrir le fichier ./web-statique/displayCards.html 
+* Web dynamique
+  * Page d'affichage de toutes les cartes : 
+    * Aller sur localhost:8080/list pour voir toutes les cartes actuellement disponibles (des données de base sont déjà simulées)
