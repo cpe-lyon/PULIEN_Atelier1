@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulaire d'Insertion de Carte</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<h2>Formulaire d'Insertion de Carte</h2>
+
+<form th:action="@{/card/insertFromForm}" method="post" th:object="${cardForm}">
+    <div>
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required="required" placeholder="Entrez le nom" th:field="*{name}">
+    </div>
+
+    <div>
+        <label for="description">Description :</label>
+        <input id="description" name="description" required="required" placeholder="Entrez la description" th:field="*{description}">
+    </div>
+
+    <div>
+        <label for="family">Famille :</label>
+        <input type="text" id="family" name="family" required="required" placeholder="Entrez la famille" th:field="*{family}">
+    </div>
+
+    <div>
+        <label for="affinity">Affinité :</label>
+        <input type="text" id="affinity" name="affinity" placeholder="Entrez l'affinité" th:field="*{affinity}">
+    </div>
+
+    <div>
+        <label for="imgUrl">URL de l'image :</label>
+        <input type="text" id="imgUrl" name="imgUrl" placeholder="Entrez l'URL de l'image" th:field="*{imgUrl}">
+    </div>
+
+    <div>
+        <label for="smallImgUrl">URL de la petite image :</label>
+        <input type="text" id="smallImgUrl" name="smallImgUrl" placeholder="Entrez l'URL de la petite image" th:field="*{smallImgUrl}">
+    </div>
+
+    <div>
+        <label for="energy">Énergie :</label>
+        <input type="number" id="energy" name="energy" required="required" placeholder="Entrez l'énergie" th:field="*{energy}">
+    </div>
+
+    <div>
+        <label for="hp">HP :</label>
+        <input type="number" id="hp" name="hp" required="required" placeholder="Entrez les HP" th:field="*{hp}">
+    </div>
+
+    <div>
+        <label for="defense">Défense :</label>
+        <input type="number" id="defense" name="defense" required="required" placeholder="Entrez la défense" th:field="*{defense}">
+    </div>
+
+    <div>
+        <label for="attack">Attaque :</label>
+        <input type="number" id="attack" name="attack" required="required" placeholder="Entrez l'attaque" th:field="*{attack}">
+    </div>
+
+    <div>
+        <label for="price">Prix :</label>
+        <input type="number" id="price" name="price" required="required" placeholder="Entrez le prix" th:field="*{price}">
+    </div>
+
+    <div>
+        <label for="usedId">ID utilisateur :</label>
+        <input type="number" id="usedId" name="usedId" placeholder="Entrez l'ID utilisateur" th:field="*{usedId}">
+    </div>
+
+    <div>
+        <button type="submit">Soumettre</button>
+    </div>
+
+</form>
+
+</body>
+</html>

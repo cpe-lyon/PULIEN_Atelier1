@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cards</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}" th:class="header">
+    <h1> THIS IS A DEFAULT HEADER</h1>
+</div>
+<table th:class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Family</th>
+        <th>Affinity</th>
+        <th>Image URL</th>
+        <th>Small Image URL</th>
+        <th>Energy</th>
+        <th>HP</th>
+        <th>Defense</th>
+        <th>Attack</th>
+        <th>Price</th>
+        <th>User ID</th>
+    </tr>
+    </thead>
+    <tbody>
+   <!-- <tr th:each="card : ${cardList}"> -->
+   <tr th:class="rows">
+        <td th:text="${card.name}">...</td>
+        <td th:text="${card.description}">...</td>
+        <td th:text="${card.family}">...</td>
+        <td th:text="${card.affinity}">...</td>
+        <td th:text="${card.imgUrl}">...</td>
+        <td th:text="${card.smallImgUrl}">...</td>
+        <td th:text="${card.energy}">...</td>
+        <td th:text="${card.hp}">...</td>
+        <td th:text="${card.defense}">...</td>
+        <td th:text="${card.attack}">...</td>
+        <td th:text="${card.price}">...</td>
+        <td th:text="${card.usedId}">...</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
