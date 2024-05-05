@@ -17,7 +17,10 @@ Atelier n°1 du module de WebDynamique - Microservices
     * Ouvrir le fichier ./web-statique/displayCard.html + ajouter le ?id=[cardnumber] dans l'URL
       
 * Web dynamique (SpringBoot + Thymeleaf):
-  *   
+  * Formulaire d'ajout de cartes
+    * Ouvrez le projet SPWebAppStep1 et lancez l'application. Ensuite rendez vous à localhost:8080/card/insertNew pour trouver le formulaire d'ajout de carte. Une fois la carte ajoutée, vous trouverez une vue avec cette même carte.
+  * Page d'affichage d'une carte:
+    * Rendez vous sur localhost:8080/{id} pour afficher la carte d'id {id}  
 
 ## Travail suplémentaire
 
